@@ -103,10 +103,9 @@
             font-weight: 700;
             margin-bottom: 25px;
             border: 1px solid var(--accent-soft);
-            transition: background 1s ease;
+            transition: all 1s ease;
         }
 
-        /* DYNAMIC SCENIC ENVIRONMENT */
         .scenic-environment {
             position: relative;
             background: linear-gradient(to bottom, #7bed9f, #a8e6cf);
@@ -118,7 +117,6 @@
             transition: all 1s ease;
         }
 
-        /* Default Background Scenery Elements */
         .scenery-layer-top, .scenery-layer-bottom {
             position: absolute;
             width: 100%;
@@ -131,7 +129,6 @@
         .scenery-layer-top { top: 8px; }
         .scenery-layer-bottom { bottom: 8px; }
 
-        /* KERALA SPECIFIC EXTRA TERRITORY ELEMENTS (Hidden until reached) */
         .kerala-scenery-overlay {
             position: absolute;
             top: 0;
@@ -157,7 +154,7 @@
         }
         .kerala-element span {
             font-size: 0.6rem;
-            background: rgba(255,255,255,0.85);
+            background: rgba(255,255,255,0.9);
             padding: 2px 4px;
             border-radius: 4px;
             color: #1a1a1a;
@@ -166,14 +163,12 @@
             white-space: nowrap;
         }
 
-        /* Positioning the elements nicely across the panel background */
-        .el-palm1 { top: 6px; left: 15%; font-size: 1.8rem; }
-        .el-teashop { bottom: 4px; left: 30%; }
+        .el-palm1 { top: 6px; left: 12%; font-size: 1.8rem; }
+        .el-teashop { bottom: 4px; left: 28%; }
         .el-kathakali { top: 4px; right: 32%; }
         .el-home { bottom: 4px; right: 12%; font-size: 1.9rem; }
-        .el-palm2 { top: 6px; right: 5%; font-size: 1.8rem; }
+        .el-palm2 { top: 6px; right: 4%; font-size: 1.8rem; }
 
-        /* RAILWAY TRACK */
         .railway-track {
             height: 12px;
             background: repeating-linear-gradient(90deg, #8c7ae6, #8c7ae6 4px, var(--track-gray) 4px, var(--track-gray) 16px);
@@ -189,11 +184,10 @@
             left: 0;
             top: 0;
             height: 100%;
-            background: rgba(255, 71, 126, 0.3);
+            background: rgba(255, 71, 126, 0.4);
             width: 0%;
         }
 
-        /* BIKE MARKER */
         .avatar-bike-container {
             position: absolute;
             top: -42px;
@@ -231,7 +225,6 @@
             100% { transform: translateY(-2px); }
         }
 
-        /* ALL STATIONS LIST */
         .stations-vertical-list {
             text-align: left;
             margin-top: 20px;
@@ -337,7 +330,6 @@
             <p>Tracking your journey back to me</p>
         </div>
 
-        <!-- Relationship Days Counter -->
         <div class="card">
             <div class="counter-box">
                 <div class="counter-number" id="days-count">0</div>
@@ -345,3 +337,12 @@
             </div>
         </div>
 
+        <div class="card">
+            <h3>Live Journey Track</h3>
+            
+            <div class="live-status-box" id="status-panel">
+                <span id="live-status-text">Setting up timeline...</span>
+            </div>
+
+            <div class="scenic-environment" id="scenic-box">
+                <div class="scenery-layer-top" id="generic-top">🌲 🌳 🌿 🌲 🌳</div>
